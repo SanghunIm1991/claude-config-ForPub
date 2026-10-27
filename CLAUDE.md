@@ -73,7 +73,7 @@ GitHubへの新規push・公開範囲拡大（visibility変更等）の前に機
 
 Pythonのインストーラやランチャーの更新は、このように他のプロジェクトのPython解決に影響しうる。Pythonを新たに導入・更新した後は、`py -0p` で既存の各Pythonがこれまでどおり解決されるかを確かめる。
 
-新規Pythonパッケージを導入する際は、インストール先が共有anaconda環境（`C:\ProgramData\anaconda3\python.exe` のbase環境）かプロジェクト専用venvかを、AskUserQuestion等で確認してから進める。anaconda base環境は、金融情報や認証情報を扱いうるものを含む他のプロジェクトとも共有されているため、無断でのインストールは環境汚染・依存衝突のリスクを伴う。この項目はプロジェクトを問わず適用する汎用ルールである。
+新規Pythonパッケージを導入する際は、インストール先が共有anaconda環境（`C:\ProgramData\anaconda3\python.exe` のbase環境）かプロジェクト専用venvかを、AskUserQuestion等で確認してから進める。anaconda base環境は、機微な情報を扱いうるものを含む他のプロジェクトとも共有されているため、無断でのインストールは環境汚染・依存衝突のリスクを伴う。この項目はプロジェクトを問わず適用する汎用ルールである。
 
 # 作業の進め方
 
