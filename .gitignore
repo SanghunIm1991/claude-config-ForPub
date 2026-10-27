@@ -1,0 +1,24 @@
+# 許可リスト方式: 明示的に許可したパス以外は全て除外する。
+# 追跡対象: CLAUDE.md / skills/ / commands/ / agents/ / hooks/ / statusline.ps1
+# 除外対象(重要): .credentials.json, history.jsonl, projects/*/*.jsonl (生の会話ログ),
+#   sessions/, shell-snapshots/, file-history/ 等のセッション一時状態,
+#   daemon.*, stats-cache.json 等の運用状態, backups/, plugins/, settings.json
+# 除外対象(GitHub公開方針、2026-08-19): projects/*/memory/ (auto memory)は、個々のプロジェクトの
+#   機密情報(個々のプロジェクトの内容・個人情報等)が混在しうるため、一律でGit管理対象から除外する。
+#   汎用的な運用ルールはCLAUDE.md/skills/commands側に反映し、そちらのみ公開する方針とする。
+
+/*
+
+!.gitignore
+!README.md
+!CLAUDE.md
+!skills/
+!commands/
+!agents/
+!hooks/
+!statusline.ps1
+hooks/__pycache__/
+# Pythonのキャッシュ（スキルのスクリプトの構文確認などでできる）
+__pycache__/
+# 第三者著作物(Anthropic公式スキルの同期物: LICENSE・XSDスキーマ等)は再配布を避けるため除外(2026-09-21)
+skills/synced/
